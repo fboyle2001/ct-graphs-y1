@@ -30,6 +30,7 @@ def greedy(G):
     for i in G.nodes():
         node_colour = find_smallest_colour(G, i)
         G.node[i]["colour"] = node_colour
+        
         if node_colour > kmax:
             kmax = node_colour
 
