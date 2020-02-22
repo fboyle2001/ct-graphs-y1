@@ -52,7 +52,7 @@ def greedy(G):
     kmax = 0
     visited_counter = 0
 
-    current_node = 1
+    current_node = [x for x in G.nodes][0]
 
     while visited_counter != n:
         colour = find_smallest_colour(G, current_node)
@@ -102,3 +102,30 @@ print('Graph G5:')
 G=graph5.Graph()
 G.add_nodes_from(G.nodes(), visited = 'no')
 greedy(G)
+
+##A.3.2
+##print("Graph A.3.2:")
+##G = nx.Graph()
+##
+##for i in range(1, 8):
+##    G.add_node("C" + str(i))
+##
+##G.add_edge("C1", "C2")
+##G.add_edge("C1", "C3")
+##G.add_edge("C1", "C5")
+##G.add_edge("C1", "C6")
+##
+##G.add_edge("C2", "C6")
+##G.add_edge("C2", "C7")
+##
+##G.add_edge("C3", "C6")
+##
+##G.add_edge("C4", "C5")
+##G.add_edge("C4", "C6")
+##
+##G.add_edge("C5", "C6")
+##G.add_edge("C5", "C7")
+##
+##G.add_nodes_from(G.nodes(), colour='never coloured')
+##G.add_nodes_from(G.nodes(), visited = 'no')
+##greedy(G)
