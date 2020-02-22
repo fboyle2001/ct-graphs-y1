@@ -5,17 +5,37 @@ import graph8
 import graph9
 import graph10
 
+visited_counter = 0
+
 def dfs(G,u):
     n = len(G.nodes())
     global visited_counter
     G.nodes[u]['visited'] = 'yes'
     visited_counter = visited_counter + 1
-    print(u)
+    print("visited", u)
     if visited_counter < n:
         for v in G.neighbors(u):
             if G.nodes[v]['visited'] == 'no':
                 dfs(G,v)
+    print("expended", u)
 
+G = nx.Graph()
+for i in range(1, 8):
+    G.add_node(i)
+G.add_edge(1, 2)
+G.add_edge(1, 3)
+G.add_edge(1, 4)
+G.add_edge(1, 5)
+G.add_edge(2, 6)
+G.add_edge(2, 7)
+G.add_edge(3, 7)
+G.add_edge(4, 7)
+G.add_edge(5, 6)
+G.add_nodes_from(G.nodes(), colour='never coloured')
+G.add_nodes_from(G.nodes(), label = -1)
+G.add_nodes_from(G.nodes(), visited = 'no')
+dfs(G, 1)
+quit()
 
 print()
 G6=graph6.Graph()
