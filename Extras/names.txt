@@ -1,0 +1,7 @@
+Amy,Brian,Clare,Ellen
+Clare,David,Ellen,Mary,Thomas
+Ellen,Fred,Eva
+Gertrude,Henry,Isla
+Isla,John,Amy,Christopher,Lee,Bob,Jack
+Brian,David,Fred,Henry,John
+Christopher,Mary,Lee,Jack,Thomas
